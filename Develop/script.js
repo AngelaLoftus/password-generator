@@ -14,7 +14,7 @@ if (numberChars < 8 || numberChars >128) {
   prompt("Invalid number of characters. Enter a number between 8 and 128.")
 }
 
-else generatePassword(numberChars) 
+// else generatePassword(numberChars) 
 
 //function call select user criteria
 //ask user if they want lower case letters
