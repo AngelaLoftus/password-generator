@@ -1,8 +1,8 @@
 # Password Generator Application
 
 ## As an employee with access to sensitive data
-  *I want to randomly generate a password that meets certain criteria
-  *So that I can create a password with greater security
+  * I want to randomly generate a password that meets certain criteria
+  * So that I can create a password with greater security
 
 
 ## Criteria Met by Project
