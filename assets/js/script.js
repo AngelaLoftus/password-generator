@@ -1,20 +1,38 @@
 // Assignment code here
-
-varLowerCaseLetters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]; 
-varUpperCaseLetters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-varNumbers = ["0","1","2","3","4","5","6","7","8","9"];
-varCharacters = ["!","@","#","$","%","&","(",")", "<",">","*","^","|"];
+var password = "";
+var lowerCaseLetters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]; 
+var upperCaseLetters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+var numbers = ["0","1","2","3","4","5","6","7","8","9"];
+var characters = ["!","@","#","$","%","&","(",")", "<",">","*","^","|"];
 
 //pick random number to assign characters 
 //Math.floor(Math.random()) 
 
-var numberChars = prompt("Please enter the number of characters you would like your password to be. Enter a number between 8 and 128.");
+function getLowerCase () {
+    return lowerCaseLetters[Math.floor(Math.random()*lowerCaseLetters.length)];
+};
+function getUpperCase (){
+    return upperCaseLetters[Math.floor(Math.random()* upperCaseLetters.length)];
+};
+function getNumbers() {
+  return numbers[Math.floor(Math.random() * numbers.length)];
+};
+function getCharacters() {
+  return characters[Math.floor(Math.random()*characters.length)];
+};
+var generatePassword = function() {
+  Math.floor(Math.random * passwordLength.length);
+}
 
-if (numberChars < 8 || numberChars >128) {
+var passwordLength = parseInt(prompt("Please enter the number of characters you would like your password to be. Enter a number between 8 and 128."));
+
+console.log(passwordLength);
+
+if (passwordLength < 8 || passwordLength > 128) {
   prompt("Invalid number of characters. Enter a number between 8 and 128.")
 }
 
-// else generatePassword(numberChars) 
+
 
 //function call select user criteria
 //ask user if they want lower case letters
@@ -30,18 +48,46 @@ var confirmNumbers= confirm("would you like numbers?");
 var confirmCharacters = confirm("Would you like special characters?");
 
 //make sure user selects at least one option
-alert("You must select at least one of the password criteria to generate a password.")
+if (!confirmLowerCase && !confirmUpperCase && !confirmNumbers && !confirmCharacters) {
+  alert("You must select at least one of the password criteria to generate a password.")
+}
+else generatePassword(passwordLength) ;
 
+
+var generatePassword   
+
+if (confirmLowerCase) {
+  password += Math.floor(Math.random()*lowerCaseLetters.length);
+}
+if (confirmUpperCase) {
+  password += Math.floor(Math.random()* upperCaseLetters.length);
+}
+if (confirmNumbers) {
+  password += Math.floor(Math.random()*numbers.length);
+}
+if (confirmCharacters) {
+  password += Math.floor(Math.random()*characters.length);
+}
 //possible combinations
 //upper, lower, number, char, upper + lower, upper + number, upper + char, lower+ number, lower + char, number + 
+//all four true
+//if (all true)
+
+//if groups of three
+
+//if only two true
+
+//if only 1 true
+
+for (i = 0; i < passwordLength.length; i++) {
+
+}
+
 
 
 //call the prompt again
 //if (confirmLowerCase === false && confirmUpperCase === false && confirmNumbers === false && confirmCharacters=== false) {alert(You must select a criterion. Try again.)}
 //else call the generateFunction
- 
- 
-
 
 
 
