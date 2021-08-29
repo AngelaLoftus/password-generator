@@ -18,4 +18,5 @@
 #  Link to deployed application
 https://angelaloftus.github.io/password-generator/
 
+# Screenshot of application
 # ![Screenshot](https://github.com/AngelaLoftus/password-generator/blob/main/assets/images/passwordGeneratorScreenshot.jpg)
